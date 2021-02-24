@@ -5,10 +5,10 @@ install_requirements:
 	@pip install -r requirements.txt
 
 check_code:
-	@flake8 scripts/* ritchie_is_awesome/*.py
+	@flake8 scripts/* ritchie_has_a_question/*.py
 
 black:
-	@black scripts/* ritchie_is_awesome/*.py
+	@black scripts/* ritchie_has_a_question/*.py
 
 test:
 	@coverage run -m pytest tests/*.py
@@ -22,8 +22,8 @@ clean:
 	@rm -f .coverage
 	@rm -fr */__pycache__ */*.pyc __pycache__
 	@rm -fr build dist
-	@rm -fr ritchie_is_awesome-*.dist-info
-	@rm -fr ritchie_is_awesome.egg-info
+	@rm -fr ritchie_has_a_question-*.dist-info
+	@rm -fr ritchie_has_a_question.egg-info
 
 install:
 	@pip install . -U
